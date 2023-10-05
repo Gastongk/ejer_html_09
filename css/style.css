@@ -29,6 +29,14 @@ nav {
     align-items: center;
     padding-inline: 20px;
 }
+.logo {
+    display: flex; 
+    align-items: center; 
+}
+.logo img {
+    margin-right: 10px; 
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -38,11 +46,12 @@ nav {
 }
 .menu-icon {
     width: 2rem;
-    height: 2rem;
+    height: 1.5rem;
     cursor: pointer;
     display: none;
     background: url("../src/icono2.png");
     background-size: cover;
+    
 }
 
 @media (max-width: 660px) {
@@ -74,8 +83,18 @@ nav {
     .menu a {
         text-align: center;
         color: var(--color-text-header);
-        
     }
+}
+.banner{
+    width: 100%;
+    height: 135px;
+    background-image: url(../src/banner.webp);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;   
+}
+.banner:hover{
+    opacity: 0.7; 
 }
 main h3 {
     text-align: center;
@@ -87,6 +106,7 @@ main h3 {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(2,2fr);
+    justify-items: center;
 }
 .ofer{
     padding: 9px;
@@ -95,6 +115,11 @@ main h3 {
 .ofer a{
     text-decoration: none;
     color: var(--color-text-body);
+    transition: color 0.5s ease;
+}
+.ofer :hover{
+    color: #08391c;
+
 }
 .btn{
     background-color: var(--color-header);
@@ -107,7 +132,7 @@ main h3 {
     transform: scale(1.5);
 }
 .grid{
-    margin:  20px;
+    margin-top:  20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1,4fr);
@@ -118,7 +143,12 @@ main h3 {
     object-fit: cover; 
     border-radius: 5px; 
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.808); 
+    transition: transform 0.5s ease;
   }
+.item:hover{
+    transform: scale(1.2);
+}
+
   .footer{
     display: flex;
     justify-content: space-between;
@@ -144,6 +174,8 @@ main h3 {
     }
     .item{
         padding: 10px;
+        margin: 10px;
+        
     }
     .footer{
         background-color: var(--color-body);
@@ -162,8 +194,11 @@ main h3 {
         width: 100%; 
     }
     .item{
-        padding-left: 10px;
-    }
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin: 0px;
+       }
     .footer{
     display: flex;
     flex-direction: column;
