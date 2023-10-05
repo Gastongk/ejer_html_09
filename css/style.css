@@ -23,23 +23,19 @@ header a {
     color: var(--color-text-header);
     text-decoration: none;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-inline: 20px;
 }
-
 .menu {
     list-style: none;
     display: flex;
 }
-
 .menu li {
     margin-right: 20px;
 }
-
 .menu-icon {
     width: 2rem;
     height: 2rem;
@@ -47,10 +43,8 @@ nav {
     display: none;
     background: url("../src/icono2.png");
     background-size: cover;
-    
 }
 
-/* estilo del menú pantallas pequeñas */
 @media (max-width: 660px) {
     
     .menu {
@@ -80,14 +74,14 @@ nav {
     .menu a {
         text-align: center;
         color: var(--color-text-header);
-        text-decoration: none;
+        
     }
 }
 main h3 {
     text-align: center;
     margin: 1rem;
 }
-.ofertas {
+.Ofertas {
     margin: 0px;
     padding-left: 2rem;
     display: grid;
@@ -95,8 +89,22 @@ main h3 {
     grid-template-rows: repeat(2,2fr);
 }
 .ofer{
-    padding: 5px;
+    padding: 9px;
     margin-bottom: 10px;
+}
+.ofer a{
+    text-decoration: none;
+    color: var(--color-text-body);
+}
+.btn{
+    background-color: var(--color-header);
+    width: 4rem;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+.btn:hover{
+    background-color: #127237;
+    transform: scale(1.5);
 }
 .grid{
     margin:  20px;
@@ -122,7 +130,6 @@ main h3 {
 .medio {
     margin: 10px;
 }
-
 
   @media (max-width: 900px) {
     .grid {
@@ -162,10 +169,25 @@ main h3 {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    background-color: var(--color-body);
-    color: var(--color-text-body);
-    }
-  
-
+    background: linear-gradient(to top, #f82222, var(--color-header));
+    } 
 }
 
+.animacion{
+    font-size: 24px;
+    display: inline-block;
+    animation: mover 6s ease-in-out infinite;
+    
+}
+@keyframes mover {
+    0% { transform: translateX(0) rotate(0) scale(1);
+    }
+    25% { transform: translateX(calc(100vw /2)) rotate(90deg) scale(1.5);
+    }
+    50% {transform: translateX(calc(100vw - 100px)) rotate(180deg) scale(1);
+    }
+    75% {transform: translateX(calc(50vw /2)) rotate(270deg) scale(1.5);
+    }
+    100% {transform: translateX(0) rotate(360deg) scale(1);
+    }
+}
